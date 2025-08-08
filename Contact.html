@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+                      <div class="flex items-center gap-4 text-[#0d141c]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">Clinic Automation</h2>
+            </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#0d141c] text-sm font-medium leading-normal" href="Home.html">Home</a>
+              <a class="text-[#0d141c] text-sm font-medium leading-normal" href="Contact.html">Contact</a>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">Contact Us</p></div>
+            <p class="text-[#0d141c] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              We're here to help. Reach out to us with any questions or to schedule an appointment. Our team is dedicated to providing you with the best possible care and support.
+            </p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Name</p>
+                <input
+                  id="name"
+                  placeholder="Your Name"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d141c] focus:outline-0 focus:ring-0 border border-[#cedbe8] bg-slate-50 focus:border-[#cedbe8] h-14 placeholder:text-[#49739c] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Email</p>
+                <input
+                  id="email"
+                  placeholder="Your Email"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d141c] focus:outline-0 focus:ring-0 border border-[#cedbe8] bg-slate-50 focus:border-[#cedbe8] h-14 placeholder:text-[#49739c] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Phone Number (Optional)</p>
+                <input
+                  id="phone"
+                  placeholder="Your Phone Number"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d141c] focus:outline-0 focus:ring-0 border border-[#cedbe8] bg-slate-50 focus:border-[#cedbe8] h-14 placeholder:text-[#49739c] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Message</p>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d141c] focus:outline-0 focus:ring-0 border border-[#cedbe8] bg-slate-50 focus:border-[#cedbe8] min-h-36 placeholder:text-[#49739c] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                onclick="sendEmail()"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Submit</span>
+              </button>
+            </div>
+            <h3 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Direct Contact</h3>
+            <div class="flex flex-col gap-4 px-4 py-3">
+              <div class="flex items-center gap-3">
+                <div class="text-[#0d141c]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
+                  </svg>
+                </div>
+                <span class="text-[#0d141c] text-base font-normal leading-normal">baouzilyasser@gmail.com</span>
+                <a href="mailto:baouzilyasser@gmail.com" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-3 bg-[#0d80f2] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+                  <span class="truncate">Email Me</span>
+                </a>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="text-[#0d141c]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h40A8,8,0,0,1,176,128Z"></path>
+                  </svg>
+                </div>
+                <span class="text-[#0d141c] text-base font-normal leading-normal">+0613603556</span>
+                <a href="https://wa.me/0613603556" target="_blank" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-3 bg-green-600 text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+                  <span class="truncate">WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function sendEmail() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+          alert('Please fill in all required fields (Name, Email, and Message)');
+          return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('Please enter a valid email address');
+          return;
+        }
+
+        // Prepare email content
+        const subject = 'New Contact Form Submission - Clinic Automation';
+        const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`;
+
+        // Create mailto link
+        const mailtoLink = `mailto:baouzilyasser@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open default email client
+        window.location.href = mailtoLink;
+
+        // Show success message
+        setTimeout(() => {
+          alert('Thank you for your message! Your email client should open with the message pre-filled. If it doesn\'t open automatically, please send an email to baouzilyasser@gmail.com');
+        }, 100);
+      }
+    </script>
+  </body>
+</html>
